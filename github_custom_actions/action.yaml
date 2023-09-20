@@ -1,0 +1,14 @@
+
+name: 'Hello World Action'
+description: 'A simple GitHub Action that echoes a message'
+inputs:
+  message:
+    description: 'The message to echo'
+    required: true
+    default: 'Hello, World!'
+outputs:
+  output_message:
+    description: 'The echoed message'
+runs:
+  using: 'shell'
+  command: './echo.sh'
