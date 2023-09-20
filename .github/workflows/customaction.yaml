@@ -1,0 +1,17 @@
+name: custom action Workflow
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Run Custom Action
+        id: hello
+        uses: ./ # Use the custom action from the current repository
+        with:
+          message: 'Custom message from workflow'
+      - name: Show Output
+        run: echo "The custom action echoed: ${{ steps.hello.outputs.output_message }}"
