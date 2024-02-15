@@ -9,3 +9,5 @@ Add-Type -AssemblyName System.IO.Compression.FileSystem ; [System.IO.Compression
 ./config.cmd --url https://github.com/cloud-dev-user/github_training_code --token AQ4IHCKNRJB443PL5EOI5YLFZVTUY
 
 ./run.cmd
+
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope LocalMachine
